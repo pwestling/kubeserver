@@ -1,0 +1,13 @@
+services:
+  - name: airflow-staging
+    context: staging
+    resource_name: service/airflow-webserver
+    namespace: airflow
+    local_port: 8080
+    remote_port: 8080
+  - name: airflow-prod
+    context: prod
+    resource_name: service/airflow-webserver
+    namespace: airflow
+    local_port: 8081
+    remote_port: 8080
